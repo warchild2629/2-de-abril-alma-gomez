@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 de Abril - Día del Veterano y de los Caídos en la Guerra de Malvinas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        malvinasNavy: '#0b1d3a',
+                        malvinasBlue: '#1e3a8a',
+                        skyPatria: '#7dd3fc',
+                        goldAccent: '#d97706',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(11, 29, 58, 0.85), rgba(11, 29, 58, 0.95)), url('https://placehold.co/1920x1080/0b1d3a/ffffff?text=Islas+Malvinas+Argentina') center/cover no-repeat;
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-skyPatria selection:text-malvinasNavy">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-malvinasNavy/90 backdrop-blur-md border-b border-skyPatria/20 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-sky-500/20 border border-sky-400 flex items-center justify-center text-sky-300 font-bold">
+                    🇦🇷
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg text-white block">Malvinas Nos Une</span>
+                    <span class="text-xs text-sky-300 tracking-wider uppercase">2 de Abril - Memoria y Soberanía</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#contexto" class="text-slate-300 hover:text-sky-300 transition-colors">Contexto</a>
+                <a href="#linea-tiempo" class="text-slate-300 hover:text-sky-300 transition-colors">Línea de Tiempo</a>
+                <a href="#heroes" class="text-slate-300 hover:text-sky-300 transition-colors">Héroes y Veteranos</a>
+                <a href="#islas" class="text-slate-300 hover:text-sky-300 transition-colors">Las Islas</a>
+                <a href="#homenaje" class="text-slate-300 hover:text-sky-300 transition-colors">Testimonios</a>
+                <a href="#reflexion" class="text-slate-300 hover:text-sky-300 transition-colors">Malvinización</a>
+                <a href="#libro-visitas" class="bg-amber-600 hover:bg-amber-500 text-white px-4 py-2 rounded-full transition-shadow shadow-md">Dejar Homenaje</a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-malvinasNavy border-b border-sky-900 px-4 pt-2 pb-6 space-y-3">
+            <a href="#contexto" class="block text-slate-300 hover:text-sky-300 py-2">Contexto</a>
+            <a href="#linea-tiempo" class="block text-slate-300 hover:text-sky-300 py-2">Línea de Tiempo</a>
+            <a href="#heroes" class="block text-slate-300 hover:text-sky-300 py-2">Héroes y Veteranos</a>
+            <a href="#islas" class="block text-slate-300 hover:text-sky-300 py-2">Las Islas</a>
+            <a href="#homenaje" class="block text-slate-300 hover:text-sky-300 py-2">Testimonios</a>
+            <a href="#reflexion" class="block text-slate-300 hover:text-sky-300 py-2">Malvinización</a>
+            <a href="#libro-visitas" class="block bg-amber-600 text-center text-white py-2 rounded-lg font-medium">Dejar Homenaje</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center pt-24 pb-16 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10 space-y-8">
+            <div class="inline-flex items-center space-x-2 bg-sky-500/10 border border-sky-400/30 px-4 py-2 rounded-full text-sky-300 text-sm font-medium tracking-wide">
+                <i data-lucide="shield" class="w-4 h-4"></i>
+                <span>Día del Veterano y de los Caídos en la Guerra de Malvinas</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white text-shadow">
+                Prohibido Olvidar: <br><span class="text-sky-400">Las Malvinas Son Argentinas</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-300 font-light leading-relaxed">
+                Honramos la memoria de quienes entregaron su vida por la patria y abrazamos a nuestros veteranos, manteniendo vivo el reclamo legítimo y pacífico de soberanía sobre nuestras islas.
+            </p>
+
+            <!-- Cuenta Regresiva al próximo 2 de Abril -->
+            <div class="bg-slate-800/80 backdrop-blur-md border border-sky-500/20 rounded-2xl p-6 max-w-xl mx-auto shadow-2xl">
+                <p class="text-xs uppercase tracking-widest text-sky-300 font-semibold mb-3">Próximo Aniversario (2 de Abril)</p>
+                <div class="grid grid-cols-4 gap-4 text-center">
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-700">
+                        <span id="days" class="font-serif text-3xl font-bold text-white block">00</span>
+                        <span class="text-xs text-slate-400">Días</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-700">
+                        <span id="hours" class="font-serif text-3xl font-bold text-white block">00</span>
+                        <span class="text-xs text-slate-400">Horas</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-700">
+                        <span id="minutes" class="font-serif text-3xl font-bold text-white block">00</span>
+                        <span class="text-xs text-slate-400">Minutos</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-700">
+                        <span id="seconds" class="font-serif text-3xl font-bold text-sky-400 block">00</span>
+                        <span class="text-xs text-slate-400">Segundos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#contexto" class="w-full sm:w-auto bg-sky-600 hover:bg-sky-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
+                    <span>Conocer la Historia</span>
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+                <a href="#libro-visitas" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium px-6 py-3.5 rounded-xl transition-all flex items-center justify-center space-x-2">
+                    <i data-lucide="pen-tool" class="w-4 h-4 text-sky-400"></i>
+                    <span>Dejar Homenaje</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexto Histórico -->
+    <section id="contexto" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Soberanía e Historia</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">¿Por qué conmemoramos el 2 de Abril?</h2>
+            <div class="w-24 h-1 bg-amber-500 mx-auto rounded-full"></div>
+            <p class="text-slate-300 text-lg">
+                El 2 de Abril de 1982 marcó el inicio de la Operación Rosario, el desembarco de tropas argentinas en las Islas Malvinas, usurpadas por el Imperio Británico desde 1833. Esta fecha nos convoca a recordar a los caídos y a reivindicar nuestros derechos soberanos.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-slate-800/50 border border-slate-700/60 p-8 rounded-2xl hover:border-sky-500/50 transition-all">
+                <div class="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center text-sky-400 mb-6">
+                    <i data-lucide="globe" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-white mb-3">Reclamo Histórico</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Los derechos argentinos sobre las islas se fundamentan en la continuidad geográfica, la herencia colonial española, y múltiples resoluciones de la Asamblea General de la ONU que instan al diálogo bilateral.
+                </p>
+            </div>
+
+            <div class="bg-slate-800/50 border border-slate-700/60 p-8 rounded-2xl hover:border-sky-500/50 transition-all">
+                <div class="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center text-sky-400 mb-6">
+                    <i data-lucide="shield-alert" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-white mb-3">El Conflicto de 1982</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Una guerra desigual de 74 días en el Atlántico Sur donde jóvenes conscriptos, oficiales y suboficiales lucharon con valor heroico bajo condiciones climáticas extremas y superioridad tecnológica contraria.
+                </p>
+            </div>
+
+            <div class="bg-slate-800/50 border border-slate-700/60 p-8 rounded-2xl hover:border-sky-500/50 transition-all">
+                <div class="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center text-sky-400 mb-6">
+                    <i data-lucide="heart" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-serif text-xl font-bold text-white mb-3">Causa Nacional</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Malvinas dejó de ser propiedad de una dictadura militar para transformarse en una causa sagrada del pueblo argentino, un símbolo de unidad nacional y justicia internacional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Línea de Tiempo Interactiva -->
+    <section id="linea-tiempo" class="py-20 bg-slate-950/60 border-y border-slate-800 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Cronología del Conflicto</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Los Hechos de 1982</h2>
+                <p class="text-slate-400">Navegá a través de los hitos más importantes de la gesta de Malvinas.</p>
+            </div>
+
+            <div class="relative border-l-2 border-sky-500/30 ml-4 md:ml-32 space-y-12">
+                <!-- Event 1 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-slate-950"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 font-serif text-sky-400 font-bold text-lg">19 de Marzo</div>
+                    <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl shadow-lg">
+                        <h3 class="font-bold text-white text-lg mb-1">El incidente de San Pedro (Georgia del Sur)</h3>
+                        <p class="text-slate-300 text-sm">Operarios argentinos desembarcan en la isla San Pedro para izar la bandera nacional, lo que genera tensión diplomática previa con Gran Bretaña.</p>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-slate-950"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 font-serif text-sky-400 font-bold text-lg">2 de Abril</div>
+                    <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl shadow-lg">
+                        <h3 class="font-bold text-white text-lg mb-1">Operación Rosario</h3>
+                        <p class="text-slate-300 text-sm">Fuerzas armadas argentinas ejecutan exitosamente el desembarco anfibio en Puerto Stanley (Puerto Argentino), recuperando temporalmente las islas.</p>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-slate-950"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 font-serif text-sky-400 font-bold text-lg">1 de Mayo</div>
+                    <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl shadow-lg">
+                        <h3 class="font-bold text-white text-lg mb-1">Inicio de los ataques aéreos y navales</h3>
+                        <p class="text-slate-300 text-sm">La aviación británica bombardea las pistas de Puerto Argentino y Darwin, marcando el comienzo formal de los combates a gran escala.</p>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-slate-950"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 font-serif text-sky-400 font-bold text-lg">2 de Mayo</div>
+                    <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl shadow-lg">
+                        <h3 class="font-bold text-white text-lg mb-1">Hundimiento del ARA General Belgrano</h3>
+                        <p class="text-slate-300 text-sm">El submarino nuclear británico HMS Conqueror torpedea y hunde al crucero fuera de la zona de exclusión, provocando la muerte de 323 marinos argentinos.</p>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-slate-950"></div>
+                    <div class="md:absolute md:-left-36 md:top-1 font-serif text-sky-400 font-bold text-lg">14 de Junio</div>
+                    <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl shadow-lg">
+                        <h3 class="font-bold text-white text-lg mb-1">Cese al fuego y rendición</h3>
+                        <p class="text-slate-300 text-sm">Tras cruentas batallas terrestres (Pradera del Ganso, Darwin, montes circundantes), se firma la rendición de las tropas argentinas en Puerto Argentino.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Héroes y Veteranos -->
+    <section id="heroes" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-amber-500 text-sm font-semibold uppercase tracking-widest">Memoria Viva</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Héroes, Veteranos y el Rol de la Mujer</h2>
+            <div class="w-24 h-1 bg-sky-500 mx-auto rounded-full"></div>
+            <p class="text-slate-300 text-lg">
+                649 argentinos dejaron su vida en el archipiélago. Su valor y el de los veteranos que regresaron continúan siendo un pilar ético y patriótico fundamental.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden group">
+                <div class="h-48 bg-slate-700 relative overflow-hidden">
+                    <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Soldados+Conscriptos" alt="Soldados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                    <span class="absolute bottom-3 left-4 bg-sky-600/80 text-white text-xs px-2.5 py-1 rounded-md font-medium">Juventud y Valor</span>
+                </div>
+                <div class="p-6 space-y-3">
+                    <h3 class="font-serif text-xl font-bold text-white">Los Conscriptos del '82</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Muchos de los combatientes eran jóvenes de 18 y 19 años cumpliendo el servicio militar obligatorio. Demostraron una entrega y resistencia conmovedora frente a adversidades extremas.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden group">
+                <div class="h-48 bg-slate-700 relative overflow-hidden">
+                    <img src="https://placehold.co/600x400/0b1d3a/ffffff?text=Mujeres+en+Malvinas" alt="Mujeres" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                    <span class="absolute bottom-3 left-4 bg-sky-600/80 text-white text-xs px-2.5 py-1 rounded-md font-medium">Enfermeras y Civiles</span>
+                </div>
+                <div class="p-6 space-y-3">
+                    <h3 class="font-serif text-xl font-bold text-white">El Rol de las Mujeres</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Enfermeras de la Armada, Fuerza Aérea y buques hospitales (como el ARA Almirante Irízar) brindaron atención médica de emergencia y contención humanitaria con notable valentía bajo fuego.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden group">
+                <div class="h-48 bg-slate-700 relative overflow-hidden">
+                    <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Veteranos+Hoy" alt="Veteranos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+                    <span class="absolute bottom-3 left-4 bg-amber-600/80 text-white text-xs px-2.5 py-1 rounded-md font-medium">Testimonio Constante</span>
+                </div>
+                <div class="p-6 space-y-3">
+                    <h3 class="font-serif text-xl font-bold text-white">La Postguerra y Malvinización</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Los veteranos asumieron la noble tarea de malvinizar: recorrer escuelas, universidades y comunidades para relatar la verdad histórica y honrar a los caídos que quedaron en Darwin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa e Islas Malvinas -->
+    <section id="islas" class="py-20 bg-slate-950/60 border-y border-slate-800 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Geografía y Soberanía</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Las Islas Malvinas</h2>
+                <p class="text-slate-300 leading-relaxed">
+                    Ubicadas en el Atlántico Sur, a unos 500 kilómetros de la costa patagónica continental, las islas Gran Malvina y Soledad forman junto a más de 200 adyacentes un archipiélago de rica fauna marina, clima frío y oceánico, y una geografía imponente.
+                </p>
+                <ul class="space-y-3 text-slate-300">
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-400"></i>
+                        <span>Superficie total: Más de 12.000 kilómetros cuadrados.</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-400"></i>
+                        <span>Plataforma continental argentina integrada.</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-sky-400"></i>
+                        <span>Hábitat natural de pingüinos, albatros y mamíferos marinos.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-slate-900 border border-slate-700 p-4 rounded-3xl shadow-2xl">
+                <!-- Simulación visual de mapa -->
+                <div class="relative h-80 sm:h-96 rounded-2xl overflow-hidden bg-slate-800 flex items-center justify-center border border-slate-700">
+                    <img src="https://placehold.co/800x600/0b1d3a/7dd3fc?text=Mapa+Islas+Malvinas+-+Soberania+Argentina" alt="Mapa Islas Malvinas" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 left-4 bg-slate-900/90 backdrop-blur-md px-4 py-2 rounded-xl border border-slate-700">
+                        <p class="text-xs text-sky-300 font-semibold">Tierra del Fuego, Antártida e Islas del Atlántico Sur</p>
+                        <p class="text-sm font-bold text-white">Jurisdicción Provincia Argentina</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios y Galería de Citas -->
+    <section id="homenaje" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+        <div class="text-center mb-16 space-y-4">
+            <span class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Voces del Conflicto</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Citas y Reflexiones</h2>
+            <div class="w-24 h-1 bg-amber-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-slate-800/40 border border-slate-700 p-8 rounded-2xl relative">
+                <i data-lucide="quote" class="w-10 h-10 text-sky-500/20 absolute top-6 right-6"></i>
+                <p class="font-serif italic text-slate-200 text-lg mb-6 leading-relaxed">
+                    "No hay que llorar a los que murieron por la patria, sino honrarlos viviendo con dignidad y defendiendo lo que es nuestro."
+                </p>
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-sky-600/30 flex items-center justify-center text-sky-300 font-bold">V</div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Veterano de Guerra</h4>
+                        <span class="text-xs text-slate-400">Testimonio histórico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-800/40 border border-slate-700 p-8 rounded-2xl relative">
+                <i data-lucide="quote" class="w-10 h-10 text-sky-500/20 absolute top-6 right-6"></i>
+                <p class="font-serif italic text-slate-200 text-lg mb-6 leading-relaxed">
+                    "Malvinas es una causa que une a todos los argentinos más allá de cualquier diferencia ideológica o partidaria."
+                </p>
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-amber-600/30 flex items-center justify-center text-amber-300 font-bold">C</div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Comunidad Educativa</h4>
+                        <span class="text-xs text-slate-400">Reflexión colectiva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflexión Actual / Malvinización -->
+    <section id="reflexion" class="py-20 bg-slate-950/60 border-t border-slate-800 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <span class="text-sky-400 text-sm font-semibold uppercase tracking-widest">El Futuro y la Diplomacia</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Malvinización hoy: Paz, Memoria y Reclamo</h2>
+            <p class="text-slate-300 text-lg leading-relaxed">
+                La Constitución Nacional consagra en su disposición transitoria primera el objetivo permanente e irrenunciable de recuperar el ejercicio pleno de la soberanía sobre las Islas Malvinas, Georgias del Sur y Sandwich del Sur y los espacios marítimos e insulares correspondientes, conforme al derecho internacional y respetando el modo de vida de sus habitantes.
+            </p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <span class="bg-slate-800 border border-slate-700 px-4 py-2 rounded-xl text-sky-300 text-sm font-medium">Diplomacia Pacífica</span>
+                <span class="bg-slate-800 border border-slate-700 px-4 py-2 rounded-xl text-sky-300 text-sm font-medium">Diálogo Internacional</span>
+                <span class="bg-slate-800 border border-slate-700 px-4 py-2 rounded-xl text-sky-300 text-sm font-medium">Educación y Memoria</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Libro de Visitas / Homenaje Interactivo -->
+    <section id="libro-visitas" class="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="bg-slate-800/80 border border-sky-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl space-y-8">
+            <div class="text-center space-y-3">
+                <span class="text-sky-400 text-sm font-semibold uppercase tracking-widest">Muro de Homenaje</span>
+                <h2 class="font-serif text-3xl font-bold text-white">Dejá tu Mensaje para los Héroes</h2>
+                <p class="text-slate-300 text-sm">Tu mensaje quedará guardado en este memorial digital.</p>
+            </div>
+
+            <form id="tribute-form" class="space-y-6" onsubmit="addTribute(event)">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-medium">Tu Nombre / Institución</label>
+                        <input type="text" id="tribute-name" required placeholder="Ej. Juan Pérez o Escuela N° 1" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-sky-400">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-medium">Provincia / Localidad</label>
+                        <input type="text" id="tribute-location" required placeholder="Ej. Córdoba, Argentina" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-sky-400">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-medium">Mensaje de Homenaje</label>
+                    <textarea id="tribute-msg" rows="4" required placeholder="Escribí tu mensaje de respeto y memoria..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-sky-400"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-semibold py-3.5 rounded-xl transition-all shadow-lg flex items-center justify-center space-x-2">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>Publicar Homenaje</span>
+                </button>
+            </form>
+
+            <div id="tributes-list" class="space-y-4 pt-6 border-t border-slate-700">
+                <h3 class="font-serif font-bold text-lg text-white mb-4">Últimos Homenajes Registrados</h3>
+                <!-- Dynamic items will appear here -->
+                <div class="bg-slate-900/80 border border-slate-700 p-4 rounded-xl space-y-2">
+                    <div class="flex justify-between items-center text-xs text-slate-400">
+                        <span class="font-semibold text-sky-400">Centro de Veteranos (Simulado)</span>
+                        <span>Buenos Aires</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">"Honor y gloria a nuestros héroes de Malvinas. Prohibido olvidar."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-sky-500/20 border border-sky-400 flex items-center justify-center text-sky-300 font-bold text-xs">
+                        🇦🇷
+                    </div>
+                    <span class="font-serif font-bold text-white text-lg">Malvinas Nos Une</span>
+                </div>
+                <p class="text-sm">
+                    Sitio web conmemorativo en honor a los veteranos y caídos en la Guerra de Malvinas. Memoria, Soberanía y Justicia.
+                </p>
+            </div>
+            <div class="space-y-3">
+                <h4 class="font-bold text-white text-sm uppercase tracking-wider">Enlaces Institucionales</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="https://www.argentina.gob.ar/defensa" target="_blank" rel="noopener" class="hover:text-sky-300 transition-colors">Ministerio de Defensa de la Nación</a></li>
+                    <li><a href="https://www.argentina.gob.ar/cancilleria" target="_blank" rel="noopener" class="hover:text-sky-300 transition-colors">Cancillería Argentina (Cuestión Malvinas)</a></li>
+                    <li><a href="#" class="hover:text-sky-300 transition-colors">Museo Malvinas e Islas del Atlántico Sur</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3">
+                <h4 class="font-bold text-white text-sm uppercase tracking-wider">Conmemoración</h4>
+                <p class="text-sm">
+                    Cada 2 de Abril, el pueblo argentino se une en un solo sentimiento de respeto y reivindicación soberana.
+                </p>
+                <div class="text-xs text-sky-400 font-medium">Las Islas Malvinas, Georgias del Sur y Sandwich del Sur son y serán argentinas.</div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-slate-900 text-center text-xs text-slate-500">
+            &copy; 2026 - Conmemoración Oficial 2 de Abril. Desarrollado con espíritu de soberanía y memoria.
+        </div>
+    </footer>
+
+    <!-- Script de Interactividad y Cuenta Regresiva -->
+    <script>
+        // Inicializar iconos Lucide
+        lucide.createIcons();
+
+        // Toggle Menú Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cuenta regresiva al próximo 2 de Abril
+        function updateCountdown() {
+            const now = new Date();
+            let year = now.getFullYear();
+            let april2 = new Date(year, 3, 2); // Mes 3 es Abril (0-indexed)
+            
+            if (now > april2) {
+                april2 = new Date(year + 1, 3, 2);
+            }
+
+            const diff = april2 - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        function showNotification(msg) {
+            const notif = document.createElement('div');
+            notif.className = 'fixed bottom-5 right-5 bg-sky-900 border border-sky-400 text-white px-4 py-3 rounded-xl shadow-2xl z-50 text-sm transition-all duration-300';
+            notif.innerText = msg;
+            document.body.appendChild(notif);
+            setTimeout(() => {
+                notif.style.opacity = '0';
+                setTimeout(() => notif.remove(), 300);
+            }, 3000);
+        }
+
+        // Agregar Homenaje al Libro de Visitas
+        function addTribute(e) {
+            e.preventDefault();
+            const name = document.getElementById('tribute-name').value;
+            const location = document.getElementById('tribute-location').value;
+            const msg = document.getElementById('tribute-msg').value;
+
+            const list = document.getElementById('tributes-list');
+            const newItem = document.createElement('div');
+            newItem.className = 'bg-slate-900/80 border border-slate-700 p-4 rounded-xl space-y-2 animate-fade-in';
+            newItem.innerHTML = `
+                <div class="flex justify-between items-center text-xs text-slate-400">
+                    <span class="font-semibold text-sky-400">${escapeHtml(name)}</span>
+                    <span>${escapeHtml(location)}</span>
+                </div>
+                <p class="text-slate-300 text-sm">"${escapeHtml(msg)}"</p>
+            `;
+            
+            list.insertBefore(newItem, list.children[1]);
+            document.getElementById('tribute-form').reset();
+            showNotification("¡Homenaje publicado con éxito en el memorial digital!");
+        }
+
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+    </script>
+</body>
+</html>
